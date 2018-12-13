@@ -1,2 +1,2 @@
 # express-socket-angular-chat
-Chat application using express.js, socket.js, angular, mongodb etc.
+Chat application server-side using node.js, express.js, socket.js, angular, mongodb etc.
