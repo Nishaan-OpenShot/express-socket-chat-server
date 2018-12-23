@@ -1,0 +1,19 @@
+{
+  "name": "express-socket-chat-server",
+  "version": "1.0.0",
+  "description": "Chat application server-side using node.js, express.js, socket.js, angular, mongodb etc.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nishaan-OpenShot/express-socket-chat-server.git"
+  },
+  "author": "Gurpreet Deol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nishaan-OpenShot/express-socket-chat-server/issues"
+  },
+  "homepage": "https://github.com/Nishaan-OpenShot/express-socket-chat-server#readme"
+}
