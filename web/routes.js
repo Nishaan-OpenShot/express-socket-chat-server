@@ -9,30 +9,22 @@ class Routes {
 
     /* creating app Routes start */
     appRoutes() {
-        this.app.get('*', routeHandler.routeNotFoundHandler);
-    }
-
-    registerRoute() {
-        this.app.post('/register', routeHandler.registerRouteHandler);
-    }
-
-    userNameCheck() {
         this.app.post('/usernameAvailable', routeHandler.userNameCheckHandler);
-    }
 
-    userSessionCheck() {
-        this.app.post('/userSessionCheck', routeHandler.userSessionCheckRouteHandler);
-    }
+		this.app.post('/register', routeHandler.registerRouteHandler);
 
-    loginRoute() {
-        this.app.post('/login', routeHandler.loginRouteHandler);
+		this.app.post('/login', routeHandler.loginRouteHandler);
+
+		this.app.post('/userSessionCheck', routeHandler.userSessionCheckRouteHandler);
+
+		this.app.post('/getMessages', routeHandler.getMessagesRouteHandler);
+
+		this.app.get('*', routeHandler.routeNotFoundHandler);	
     }
+    /* creating app Routes end */
 
     routesConfig() {
         this.appRoutes();
-        this.registerRoute();
-        this.userNameCheck();
-        this.userSessionCheck();
     }
 
 }
