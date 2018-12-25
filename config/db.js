@@ -19,7 +19,6 @@ class Db {
                 if(err) {
                     reject(err);
                 } else { 
-                    console.log(`MongoDB connection successful`);
                     assert.equal(null, err);
                     resolve([db, this.ObjectID]);
                 }
