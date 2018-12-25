@@ -7,8 +7,8 @@ const dotenv = require('dotenv');
 class AppConfig {
     
     constructor(app) {
-dotenv.config();
-this.app = app;
+        dotenv.config();
+        this.app = app;
     }
 
     includeConfig() {

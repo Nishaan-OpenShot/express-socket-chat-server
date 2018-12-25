@@ -15,12 +15,13 @@ class Db {
     onConnect() {
         const mongoURL = process.env.DB_URL;
         return new Promise((resolve,reject) => {
-            this.mongoClient.connect(mongoURL, (err, db) => {
+            this.mongoClient.connect(mongoURL, { useNewUrlParser: true }, (err, db) => {
                 if(err) {
                     reject(err);
                 } else { 
+                    console.log(`MongoDB connection successful`);
                     assert.equal(null, err);
-                    resolve([db,this.ObjectID]);
+                    resolve([db, this.ObjectID]);
                 }
             });
         });

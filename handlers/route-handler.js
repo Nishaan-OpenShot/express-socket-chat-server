@@ -1,4 +1,4 @@
-const helder = require('./../handlers/query-handler');
+const queryHandler = require('./../handlers/query-handler');
 const CONSTANTS = require('./../config/constants');
 const passwordHash = require ('./../utils/password-hash');
 
@@ -15,7 +15,7 @@ class RouteHandler {
 		} else {
 			try {
 				const count = await queryHandler.userNameCheck( {
-					username : username.toLowerCase()
+					username : escape(username).toLowerCase()
 				});
 				if (count > 0) {
 					response.status(200).json({

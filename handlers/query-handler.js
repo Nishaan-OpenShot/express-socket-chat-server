@@ -1,6 +1,5 @@
 
 'use strcit';
-const mongodb = require('mongodb');
 
 class Queryhandler {
     
@@ -8,18 +7,19 @@ class Queryhandler {
         this.Mongodb = require("./../config/db");
     }
 
-	userNameCheck(data){
+	userNameCheck(data) {
 		return new Promise( async (resolve, reject) => {
 			try {
-				const [DB, ObjectID] = await this.Mongodb.onConnect();
+				 const [DB, ObjectID] = await this.Mongodb.onConnect();
 				DB.collection('users').find(data).count( (error, result) => {
 					DB.close();
 					if( error ){
 						reject(error);
 					}
-					resolve(result);
+				 	resolve(result);
 				});
 			} catch (error) {
+				console.log('error', error);
 				reject(error)
 			}
 		});

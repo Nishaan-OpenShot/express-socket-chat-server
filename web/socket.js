@@ -1,7 +1,7 @@
 'use strict';
 
 const path = require('path');
-const helper = require('./../handlers/query-handler');
+const queryHandler = require('./../handlers/query-handler');
 const CONSTANTS = require('./../config/constants');
 
 class Socket {
